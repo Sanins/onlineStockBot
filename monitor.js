@@ -13,11 +13,14 @@ async function initBrowser() {
 }
 
 async function sendNotification() {
+    const email = '';
+    const password = '';
+
     let transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
-            user: '',
-            pass: ''
+            user: email,
+            pass: password
         }
     });
 
@@ -25,8 +28,8 @@ async function sendNotification() {
     let htmlText = `<a href=\"${ps5_url}\">Link</a>`
 
     let info = await transporter.sendMail({
-        from: '"amazon monitor" <robertsanins@gmail.com',
-        to: 'robertsanins@gmail.com',
+        from: `"amazon monitor" <${email}>'`,
+        to: email,
         subject: 'PLAYSTATION 5 BACK IN STOCK',
         text: textToSend,
         html: htmlText
