@@ -1,0 +1,17 @@
+{
+  "name": "ps5bot",
+  "version": "1.0.0",
+  "description": "bot for emailing when ps5 is in stock",
+  "main": "monitor.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cheerio": "^1.0.0-rc.5",
+    "cron": "^1.8.2",
+    "nodemailer": "^6.5.0",
+    "puppeteer": "^8.0.0"
+  }
+}
